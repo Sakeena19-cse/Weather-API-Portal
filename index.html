@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather API Portal</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="icon" href="data:">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    
+    <div class="container">
+
+    <div class="weather-card">
+
+        <h1>🌤 Weather API Portal</h1>
+
+        <p class="subtitle">
+            Real-time weather updates using API integration,
+            geolocation, and asynchronous JavaScript.
+        </p>
+
+        <div class="search-box">
+            <input type="text" id="cityInput"
+                placeholder="Enter City Name">
+
+            <button onclick="getWeather()">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+
+        <button class="location-btn"
+            onclick="getLocationWeather()">
+            <i class="fas fa-location-dot"></i>
+            Use My Location
+        </button>
+        <div id="weatherResult" class="weather-info">
+            <div class="placeholder">
+                Search a city to view weather details
+            </div>
+        </div>
+
+<div class="forecast-container">
+
+<h2>5-Day Forecast</h2>
+
+<div id="forecastCards"></div>
+
+</div>
+</div>
+</div>
+    <div class="chart-container">
+    <canvas id="weatherChart"></canvas>
+</div>
+
+
+</div>
+<div class="stats-grid">
+
+<div class="stat-card">
+<i class="fas fa-temperature-high"></i>
+<h3>32°C</h3>
+<span>Temperature</span>
+</div>
+
+<div class="stat-card">
+<i class="fas fa-wind"></i>
+<h3>12 km/h</h3>
+<span>Wind</span>
+</div>
+
+<div class="stat-card">
+<i class="fas fa-droplet"></i>
+<h3>78%</h3>
+<span>Humidity</span>
+</div>
+
+<div class="stat-card">
+<i class="fas fa-smog"></i>
+<h3>Good</h3>
+<span>AQI</span>
+</div>
+
+</div>
+<br>
+
+
+<section class="hero">
+
+<h1>
+Weather Intelligence Dashboard
+</h1>
+
+<p>
+
+Monitor real-time weather conditions,
+air quality, forecasts, sunrise/sunset,
+and climate trends using modern API
+integration and interactive data
+visualization.
+
+</p>
+<br>
+<div class="info-card">
+    <h3>Sunrise</h3>
+    <p id="sunrise"></p>
+</div>
+<br>
+<div class="info-card">
+    <h3>Sunset</h3>
+    <p id="sunset"></p>
+</div>
+<br>
+
+<div class="info-card">
+    <h3>Air Quality</h3>
+    <p id="aqi">--</p>
+</div>
+
+</section>
+<footer>
+
+<p>
+© 2026 Weather Intelligence Dashboard
+</p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
