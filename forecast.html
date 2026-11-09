@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WeatherSphere | Weather Forecast</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="site-header">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                ☁ WeatherSphere
+            </a>
+
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="forecast.html" class="active">Forecast</a>
+                <a href="air-quality.html">Air Quality</a>
+                <a href="insights.html">Insights</a>
+                <a href="about.html">About</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">WEATHER PREDICTION</span>
+
+                <h1>Plan Ahead.<br>Stay Prepared.</h1>
+
+                <p>
+                    Explore upcoming weather conditions
+                    with our five-day weather forecast.
+                </p>
+            </div>
+        </section>
+
+        <!-- Search -->
+        <section class="weather-card">
+
+            <h2>Explore Weather Forecast</h2>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="forecastCityInput"
+                    placeholder="Enter city name..."
+                >
+
+                <button onclick="getForecastByCity()">
+                    <i class="fas fa-search"></i>
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Forecast -->
+        <section class="forecast-section">
+
+            <div class="section-heading">
+                <span class="eyebrow">UPCOMING WEATHER</span>
+                <h2>5-Day Forecast</h2>
+
+                <p>
+                    Get daily temperature and humidity information.
+                </p>
+            </div>
+
+            <div id="forecastCards" class="forecast-container">
+
+                <div class="placeholder">
+                    <i class="fas fa-cloud-sun"></i>
+                    <p>Search for a city to view its forecast.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Temperature Chart -->
+        <section class="chart-section">
+
+            <div class="section-heading">
+                <span class="eyebrow">WEATHER ANALYTICS</span>
+                <h2>Temperature Trends</h2>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="weatherChart"></canvas>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+            <i class="fas fa-cloud-sun"></i>
+            WeatherSphere
+        </div>
+
+        <p>Smart Weather Forecasting and Monitoring Portal</p>
+
+        <p class="copyright">
+            © 2026 WeatherSphere. All Rights Reserved.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

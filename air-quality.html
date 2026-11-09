@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WeatherSphere | Air Quality</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="site-header">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                ☁ WeatherSphere
+            </a>
+
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="forecast.html">Forecast</a>
+                <a href="air-quality.html" class="active">Air Quality</a>
+                <a href="insights.html">Insights</a>
+                <a href="about.html">About</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-content">
+
+                <span class="eyebrow">ATMOSPHERIC MONITORING</span>
+
+                <h1>Breathe Better.<br>Stay Informed.</h1>
+
+                <p>
+                    Explore air pollution levels and understand
+                    the quality of the air around your city.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Search -->
+        <section class="weather-card">
+
+            <h2>Check Air Quality</h2>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="aqCityInput"
+                    placeholder="Enter city name..."
+                >
+
+                <button onclick="getAirQualityByCity()">
+                    <i class="fas fa-search"></i>
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- AQI Result -->
+        <section class="stats-section">
+
+            <div class="section-heading">
+                <span class="eyebrow">LIVE AIR QUALITY DATA</span>
+                <h2>Air Quality Overview</h2>
+            </div>
+
+            <div class="aqi-result-card">
+
+                <div class="aqi-icon">
+                    <i class="fas fa-lungs"></i>
+                </div>
+
+                <h2 id="aqiCityName">Your City</h2>
+
+                <div class="aqi-value" id="aqiValue">--</div>
+
+                <h3 id="aqiStatus">Waiting for data</h3>
+
+                <p id="aqiDescription">
+                    Search for a city to view its air quality.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Pollutants -->
+        <section class="stats-section">
+
+            <div class="section-heading">
+                <span class="eyebrow">POLLUTION INDICATORS</span>
+                <h2>Air Pollutants</h2>
+            </div>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-smog"></i>
+                    </div>
+                    <h3 id="coValue">--</h3>
+                    <span>Carbon Monoxide (CO)</span>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 id="no2Value">--</h3>
+                    <span>Nitrogen Dioxide (NO₂)</span>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h3 id="o3Value">--</h3>
+                    <span>Ozone (O₃)</span>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3 id="pm25Value">--</h3>
+                    <span>Fine Particles (PM2.5)</span>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-logo">
+            <i class="fas fa-cloud-sun"></i>
+            WeatherSphere
+        </div>
+
+        <p>Smart Weather Forecasting and Monitoring Portal</p>
+
+        <p class="copyright">
+            © 2026 WeatherSphere. All Rights Reserved.
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

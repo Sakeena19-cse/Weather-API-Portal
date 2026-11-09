@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Insights | WeatherSphere</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <i class="fas fa-cloud-sun"></i> WeatherSphere
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="forecast.html">Forecast</a>
+        <a href="air-quality.html">Air Quality</a>
+        <a href="insights.html" class="active">Insights</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<main class="insights-container">
+
+    <section class="page-heading">
+        <h1>Weather Insights</h1>
+        <p>Explore weather patterns and understand changing conditions.</p>
+    </section>
+
+    <section class="search-section">
+        <input type="text" id="insightsCityInput"
+               placeholder="Enter city name...">
+        <button onclick="getWeatherInsights()">
+            <i class="fas fa-search"></i> Analyze
+        </button>
+    </section>
+
+    <h2 id="insightsCityName">Weather Overview</h2>
+
+    <section class="insights-grid">
+
+        <div class="insight-card">
+            <i class="fas fa-temperature-high"></i>
+            <h3>Temperature</h3>
+            <p id="insightTemp">-- °C</p>
+        </div>
+
+        <div class="insight-card">
+            <i class="fas fa-droplet"></i>
+            <h3>Humidity</h3>
+            <p id="insightHumidity">-- %</p>
+        </div>
+
+        <div class="insight-card">
+            <i class="fas fa-wind"></i>
+            <h3>Wind Speed</h3>
+            <p id="insightWind">-- m/s</p>
+        </div>
+
+        <div class="insight-card">
+            <i class="fas fa-cloud"></i>
+            <h3>Cloud Coverage</h3>
+            <p id="insightClouds">-- %</p>
+        </div>
+
+    </section>
+
+    <section class="chart-section">
+        <h2>5-Day Temperature Trend</h2>
+        <canvas id="insightsChart"></canvas>
+    </section>
+
+    <section class="weather-summary">
+        <h2>Weather Analysis</h2>
+        <p id="weatherAnalysis">
+            Search for a city to view its weather insights.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 WeatherSphere. Smart Weather Monitoring Portal.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
